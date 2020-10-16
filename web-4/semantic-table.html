@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table-layout {
+            display: table;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-row > div {
+            display: table-cell;
+            padding:5px 15px;
+            border:solid 1px #CCC;
+        }
+        header.table-row {
+            background: #000;
+            color:aliceblue;
+        }
+        .table-row > div:nth-child(3) {
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <section class="table-layout">
+        <header class="table-row">
+            <div>No</div>
+            <div>Name</div>
+            <div>Alamat</div>
+        </header>
+        <section class="table-row">
+            <div>1</div>
+            <div>Nugraha</div>
+            <div>Sukabumi</div>
+        </section>
+        <section class="table-row">
+            <div>2</div>
+            <div>Darma</div>
+            <div>Cibadak</div>
+        </section>
+        <section class="table-row">
+            <div>3</div>
+            <div>Darul</div>
+            <div>Nagrak</div>
+        </section>
+    </section>
+</body>
+</html>

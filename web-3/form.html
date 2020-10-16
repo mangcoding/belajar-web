@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			max-width:600px;
+			margin:20px auto;
+		}
+		form {
+			border:solid 1px #CCC;
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Registrasi Data</h3>
+	<form action="">
+		<p>
+			<input type="text" name="name" placeholder="Input your Name">
+		</p>
+		<p>
+			<input type="text" name="phone" placeholder="Your Phone">
+		</p>
+		<p>
+			<input type="password" name="password" placeholder="Your password">
+		</p>
+		<p>
+			<input type="date" name="password" placeholder="Your birhtdate">
+		</p>
+		<p>
+			<p><label>Gender</label>
+			<p><input type="radio" name="gender" value="L"> Laki-laki
+			<br ><input type="radio" name="gender" value="P"> Perempuan
+		</p>
+		<p>
+			<p><label>Hobby</label>
+			<p><input type="checkbox" name="hobby" value="L"> Maen Games
+			<br ><input type="checkbox" name="hobby" value="P"> Berenang
+			<br ><input type="checkbox" name="hobby" value="P"> Main Basket
+		</p>
+		<p>
+			<p><label for="">Asal Sekolah</label>
+			<select name="school_from" id="">
+				<option value="SMAN 1 Cibadak">SMAN 1 Cibadak</option>
+				<option value="SMAN 1 Cisolok">SMAN 1 Cisolok</option>
+				<option value="SMAN 1 Nagrak">SMAN 1 Nagrak</option>
+			</select>
+		</p>
+		<p>
+			<label>Alamat</label>
+			<p><textarea></textarea>
+		</p>
+		<p>
+			<label for="">Upload your picture</label>
+			<input type="file" name="avatar" />
+
+		<div class="action">
+			<input type="submit" value="Save & Continue">
+			<input type="reset" value="Reset">
+			<button type="submit">Save & Continue</button>
+			<input type="reset" value="Reset">
+		</div>
+	</form>
+</body>
+</html>
