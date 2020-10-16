@@ -1,0 +1,56 @@
+header.bottom {
+  background: #000;
+  padding:50px 15px;
+  text-align: center;
+}
+
+header.bottom *{
+  color:#FFF;
+}
+
+header.bottom p {
+  color:yellow;
+} 
+
+.color-green {
+  color:green !important;
+}
+
+a[href*="mangcoding"] {
+  background: red;
+  display: inline-block;
+  padding:10px 15px;
+}
+
+a[href*="facebook"] {
+  background: blue;
+  color:#FFF;
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+header.bottom {
+  position: relative;
+}
+a:hover {
+  background-color: green;
+}
+
+header:nth-child(2):before{
+  content:"";
+  background-color:rgb(105, 37, 37);
+  width:50px;
+  display: block;
+  height:10px;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+header > h3 {
+  font-size:32px;
+}
+/*
+# ----> untuk selector ID
+. ----> untuk selector class
