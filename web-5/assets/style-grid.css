@@ -1,0 +1,56 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Poppins', sans-serif;
+}
+.partner {
+	background-color: #f6f6f6;
+	padding:116px 0px;
+}
+
+.container {
+	width:90%;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.partner-area {
+	display: grid;
+	grid-template-columns: 25% 75%;
+	align-items: center;
+	/*direction: rtl;*/
+}
+
+.partner-area label{
+	font-family: Poppins;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.partner-area ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+	display: grid;
+	grid-template-columns: repeat(4, 25%); /* same with 33.33% 33.33% 33.33% */
+	grid-gap: 20px;
+	max-width: 100%;
+	max-width: calc(100% - 60px); /* supaya tidak overflow, karena ada gap 20px*/
+}
+
+.partner-area ul li {
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	background-color: #fbfbfb;
+	align-items: center;
+	justify-content: center;
+	height:180px;
+	display: flex;
+	align-items: center;
+}
+
+.partner-area ul li a img {
+	width: 158px;
+	height: 39px;
+	object-fit: contain;
+}
