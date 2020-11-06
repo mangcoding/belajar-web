@@ -1,0 +1,48 @@
+html,body {
+	padding:0;
+	margin:0;
+}
+
+header {
+	background: #000;
+	color:#FFF;
+	padding:50px 15px;
+	text-align: center;
+}
+
+article {
+    top: -70px;
+    position: relative;
+    left: 100px;
+    max-width: calc(100% - 200px);
+}
+article p {
+	padding:30px 15px;
+}
+article h4 {
+	background: #FFF;
+	color:#000;
+	padding:30px 15px;
+}
+
+article img {
+	position: fixed;
+	padding:10px 25px;
+	color:#FFF;
+	border-color:transparent;
+	cursor: pointer;
+	bottom:0;
+	width:500px;
+	left:-200px;
+	z-index: 200;
+}
+
+article .content {
+	position:relative;
+	z-index:99;
+}
+
+article button:hover {
+	background: yellow;
+	color:#000;
+}
