@@ -1,0 +1,15 @@
+$base-font: "Arial";
+$size-h1:48px;
+$size-h2:42px;
+
+body {
+    font-family: $base-font;
+}
+
+h1 {
+    font-size:$size-h1;
+}
+
+h2 {
+    font-size:$size-h2;
+}
