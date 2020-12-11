@@ -1,15 +1,15 @@
-$base-font: "Arial";
-$size-h1:48px;
-$size-h2:42px;
+@import "base/variable";
+@import "base/font";
+@import "base/reset";
+@import "base/heading";
+@import "base/shared";
+@import "base/mixin";
 
-body {
-    font-family: $base-font;
-}
+@import "components/button";
+@import "components/form";
+@import "components/grid";
+@import "components/tables";
+@import "components/navigation";
 
-h1 {
-    font-size:$size-h1;
-}
-
-h2 {
-    font-size:$size-h2;
-}
+@import "layouts/homepage";
+@import "style";

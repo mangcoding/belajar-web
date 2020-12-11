@@ -1,0 +1,43 @@
+#homepage {
+    header {
+        img {
+            width:100vw;
+            height:100vh;
+            object-fit: cover;
+        }
+        .caption {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background: rgba(#FFF, .4);
+            padding:20px 15px;
+        }
+    }
+
+    nav {
+        background: #FFF;
+        li {
+            a {
+                color:$primary-color;
+            }
+        }
+    }
+}
+.panel-list {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .panel {
+        @extend %flex-center;
+        &:nth-child(4n+1) {
+            @include panel(#FFFFFF, rgba(0, 0, 0, 0.3));
+        }
+
+        &:nth-child(4n+2) {
+            @include panel(#000000, rgba(red, 0.3));
+            color: #FFF;
+        }
+    }
+}
