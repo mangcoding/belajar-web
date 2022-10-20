@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          header {
+            @apply pt-5;
+            background: linear-gradient(180deg, #FFFFFF 0%, #EAF4FF 46.08%, #FFFFFF 100%);
+          }
+          nav a {
+            @apply hover:underline hover:text-primary font-nav;
+          }
+          .button-primary {
+            @apply bg-primary text-white px-5 py-2 rounded-full;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navigation" class="container flex gap-10 justify-between mx-auto items-center">
+            <div class="left-side flex gap-10 items-center">
+                <img src="./logo.svg" alt="logo">
+                <nav>
+                    <ul class="flex items-center gap-5">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right-side flex gap-10">
+                <button>
+                    <img src="./search.svg" alt="search">
+                </button>
+                <button class="button-primary">Get Started</button>
+            </div>
+        </div>
+        <section class="hero lg:max-w-[700px] mx-auto">
+            <h1 class="font-base text-heading-1 font-bold text-center mt-10 leading-tight">It's Fun To Build a Website With The Mangcoding Team</h1>
+            <p class="text-center text-[#636363] my-3">The Mangcoding team will help build a website for your company with quality and guaranteed services, with custom templates you can create a website as you like.</p>
+            <div class="mb-5 action mx-auto flex justify-center items-center gap-5">
+                <a href="#" class="button-primary">Get Started</a>
+                <a href="#" class="underline flex items-center gap-2">
+                    Explore Our Blog
+                    <img src="./arrow-right.svg" alt="">
+                </a>
+            </div>
+            <img src="./thumbnail.png" alt="">
+        </section>
+    </header>
+</body>
+</html>
