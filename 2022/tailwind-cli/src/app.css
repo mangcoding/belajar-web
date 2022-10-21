@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "header.css";
+
+@layer utilities {
+    .button-primary {
+        @apply bg-primary py-3 px-6 rounded-full text-white;
+    }
+    
+    #navigation nav a {
+        @apply font-raleway;
+    }
+
+    .text-linearbg {
+        background: linear-gradient(90.01deg, #E18700 35.24%, #FF32AD 66.21%, #0EC5D7 97.18%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
