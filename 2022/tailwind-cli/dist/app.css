@@ -811,8 +811,8 @@ video {
   display: none;
 }
 
-.max-w-\[\'650px\'\] {
-  max-width: '650px';
+.max-w-\[650px\] {
+  max-width: 650px;
 }
 
 .flex-shrink {
