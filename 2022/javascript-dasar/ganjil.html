@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="angka">Input Angka</label>
+        <input type="number" name="angka" id="angka">
+        <button type="button">Cek Ganjil/Genap</button>
+        <div id="hasilArea">
+            Bilangan ini <span class="hasil" style="color:red;">Ganjil</span>
+        </div>
+    </form>
+
+    <script>
+        const button = document.querySelector('button');
+        const hasilArea = document.querySelector('#hasilArea');
+        hasilArea.style.display = 'none';
+
+        button.addEventListener("click", function() {
+            let angka = document.querySelector('#angka').value;
+            let keterangan = '';
+            if (angka % 2 == 0) {
+                keterangan = 'Genap';
+            } else {
+                keterangan = 'Ganjil';
+            }
+            let hasil = document.querySelector('.hasil');
+            hasil.textContent = keterangan;
+            hasilArea.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -12,11 +12,11 @@ body {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 200px 500px 200px 200px;
     grid-template-areas:
-      "header header header aside"
+      "header header header header"
       "main main main aside"
-      "footer footer footer aside";
+      "footer footer footer footer";
   }
   
   .container .grid .grid-item {
