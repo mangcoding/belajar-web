@@ -18,21 +18,22 @@
 
     <script>
         const button = document.querySelector('button');
-        const hasilArea = document.querySelector('#hasilArea');
-        hasilArea.style.display = 'none';
-
-        button.addEventListener("click", function() {
-            let angka = document.querySelector('#angka').value;
-            let keterangan = '';
-            if (angka % 2 == 0) {
-                keterangan = 'Genap';
-            } else {
-                keterangan = 'Ganjil';
-            }
+        const hasilArea = document.getElementById('hasilArea');
+        hasilArea.style.display= 'none';
+        button.addEventListener('click', function() {
+            const angka = document.getElementById('angka').value;
             let hasil = document.querySelector('.hasil');
-            hasil.textContent = keterangan;
-            hasilArea.style.display = 'block';
-        });
+            
+            if (angka%2 == 0) {
+                hasil.innerHTML = 'Genap';
+            } else if(angka%5 == 0) {
+                hasil.innerHTML = 'Kelipatan 5';
+            } else{
+                hasil.innerHTML = 'Ganjil';
+            }
+            
+            hasilArea.style.display= 'block';
+        })
     </script>
 </body>
 </html>
