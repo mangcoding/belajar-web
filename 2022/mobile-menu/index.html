@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="./icofonts.css">
     <style type="text/tailwindcss">
         @layer utilities {
           nav a {
@@ -18,6 +19,10 @@
 
           nav a.active {
             @apply text-black;
+          }
+
+          nav > ul > li {
+            @apply p-5;
           }
 
           .button-primary {
@@ -47,11 +52,46 @@
             width: 32px;
             height: 32px;
         }
+
+        .submenu {
+            @apply absolute m-0 py-1 bg-primary invisible opacity-0 transition-all ease-in-out;
+        }
+
+        .submenu a {
+            @apply text-white min-w-[135px] w-full block py-1 px-4 hover:bg-secondary hover:text-white;
+        }
+
+        .has-child:hover .submenu {
+            @apply visible opacity-100;
+        }
+
+        .has-child {
+            @apply relative cursor-pointer;
+        }
+        .has-child > span.caret {
+            @apply invert absolute h-[26px] w-[12px] -right-0 top-1/2 transform -translate-y-1/2;
+            content: url('data:image/svg+xml;charset=UTF-8, <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.666992 0.666748L4.33366 4.66675L8.00033 0.666748" stroke="white"/></svg>');
+        }
         
         @media screen and (max-width:1023px) {
             nav {
                 left: -100%;
                 transition: all .3s ease-in-out;
+            }
+            nav > ul > li {
+                @apply w-full p-0;
+            }
+            .has-child  {
+                @apply overflow-hidden;
+            }
+            .has-child > span.caret {
+                @apply invert-0 top-4;
+            }
+            .has-child.active .submenu {
+                @apply visible opacity-100 max-h-[1000px];
+            }
+            nav .submenu {
+                @apply visible opacity-100 relative w-full max-h-0;
             }
             nav.active {
                 left: 0;
@@ -61,18 +101,42 @@
 </head>
 <body>
     <header class="bg-header">
-        <section class="container px-5 lg:px-0 mx-auto">
+        <section class="container px-5 xl:px-0 mx-auto">
             <section id="topbar" class="flex justify-between gap-10 items-center py-5">
                 <div id="left-side" class="flex gap-10 items-center">
                     <img src="./logo.svg" alt="">
                     <nav class="fixed w-full h-full top-0 p-10 lg:p-0 lg:relative bg-primary lg:bg-transparent">
-                        <ul class="flex flex-col lg:flex-row gap-5 items-center">
-                            <li><a href="#" class="active">Home</a></li>
-                            <li><a href="#">About</a></li>
+                        <ul class="flex flex-col lg:flex-row gap-y-5 gap-x-2 items-center">
+                            <li><a href="#" class="active">
+                                <span class="icon-home"></span>
+                                Home</a></li>
+                            <li class="has-child">
+                                <a href="#">  
+                                About</a>
+                                <span class="caret"></span>
+                                <ul class="submenu">
+                                    <li><a href="#">Visi</a></li>
+                                    <li><a href="#">Misi</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Services</a></li>
-                            <li><a href="#">Work</a></li>
+                            <li class="has-child">
+                                <a href="#">Work</a>
+                                <span class="caret"></span>
+                                <ul class="submenu">
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Study Cases</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-address-book"></span>
+                                    Contact
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -99,7 +163,7 @@
                     The Mangcoding team will help build a website for your company with quality and guaranteed services, with custom templates you can create a website as you like.
                 </p>
             </div>
-            <div class="action mx-auto flex justify-center items-center gap-10">
+            <div class="action bg mx-auto flex justify-center items-center gap-10">
                 <a href="#get-started">Get Started</a>
                 <a href="#" class="underline flex items-center gap-5 hover:no-underline">Explore our blog <img src="./arrow-right.svg" alt=""></a>
             </div>

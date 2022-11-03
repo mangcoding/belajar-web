@@ -12,3 +12,9 @@ document.querySelectorAll("a[href*='get-started']").forEach(function(anchor) {
         alert("Membuka popup");
     });
 });
+
+document.querySelectorAll("li.has-child").forEach(function(anchor) {
+    anchor.querySelector(".caret").addEventListener("click",(event)=> {
+        anchor.classList.toggle('active');
+    });
+});
